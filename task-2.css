@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.speed {
+    padding: 10px;
+    background-color: skyblue;
+    width: 10vw;
+    cursor: pointer;
+
+}
+
+.image {
+    margin-top: 40px;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid #000; */
+    text-align: center;
+    object-fit: cover;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+    transition: 0.4s ease;
+
+}
+
+.speed-1:hover~.image>img {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1.8s;
+}
+
+.speed-2:hover~.image>img {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3s;
+}
+
+.speed-3:hover~.image>img {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.speed-4:hover~.image>img {
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.4s;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+
+    }
+}
+@media screen and (max-width : 410px) {
+
+    .image{
+
+        width: 90vw;
+        height: auto;
+        object-fit: cover;
+    }
+    
+}
